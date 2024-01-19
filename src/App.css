@@ -3,6 +3,7 @@ body{
   padding: 0;
   user-select: none;
   font-family: "FuturaPT, Arial", sans-serif;
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;
@@ -26,11 +27,13 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 .header-inner-center{
   display: flex;
   justify-content: space-between;
+}
+.logo{
+  cursor: pointer;
 }
 .header-about,
 .header-news,
@@ -49,10 +52,12 @@ body{
   background-color: #ededed;
   border-radius: 20px;
   border: none;
+  cursor: pointer;
 }
 .header-btn-two{
   margin-left: 15px;
   font-weight: bold;
+  cursor: pointer;
   padding: 10px;
   color: #f7f7f7;
   background-color: #f7ba6f;
@@ -92,11 +97,18 @@ body{
   z-index: 1;
   color: #fff;
   font-weight: bolder;
-  text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 45px;
+  font-size: 72px;
   padding: 24px 0 38px 0;
+  line-height: 1.17;
 }
+#about{
+  scroll-margin-block-start: 130px;
+}
+#news{
+  scroll-margin-block-start: 150px;
+}
+
 .green-box{
   text-align: center;
   font-weight: bold;
@@ -363,13 +375,66 @@ body{
   padding-bottom: 75px;
   background-color: #171717;
 }
+.footer-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo{
+  width: 120px;
+  height: 120px;
+}
+.footer-main-txt{
+  color: #7d7d7d;
+  font-size: 14px;
+  margin-top: 40px;
+  width: 200px;
+}
+.footer-links{
+  display: flex;
+  flex-direction: column;
+}
+.footer-links a{
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.footer-social{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-social div {
+  background: rgb(227, 136, 32);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.footer-logo-btn{
+  cursor: pointer;
+}
+@media screen and (max-width: 1260px){
+  .main-img-section-txt{
+    font-size: 60px;
+  }
+  .says-card-txt{
+    font-size: 16px;
+  }
+}
 @media  screen and (max-width: 950px){
   .header{
-    position: relative;
     display: flex;
+    transition: all ease-in-out 0.5s;
+    box-shadow: none;
+    position: inherit;
   }
   .header-active{
-    margin-bottom: 280px;
+    margin-bottom: 300px;
+    transition: all ease-in-out 0.5s;
+
   }
   .logo{
     margin-bottom: 30px;
@@ -405,7 +470,21 @@ body{
     margin-bottom: 20px;
     cursor: pointer;
   }
+  .header-btns{
+    display: flex;
+    flex-direction: column;
+  }
+  .header-btn-one{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .header-btn-two{
+    margin-left: 0;
+  }
   .green-box{
     max-width: 640px;
+  }
+  .main-img-section-txt{
+    font-size: 40px;
   }
 }
